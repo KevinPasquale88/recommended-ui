@@ -1,0 +1,34 @@
+<div class="container">
+    <h1>Insert your generic information</h1>
+    <form #heroForm="ngForm" class="row g-3">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="nickName">NickName</label>
+                <input type="text" class="form-control" id="nickName"
+                   required
+                   [(ngModel)]="model.nickName" name="nickName">
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="power" required [(ngModel)]="model.gender" name="gender">
+                    <option *ngFor="let sex of genders" [value]="sex">{{sex}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="3" max="120" class="form-range" required [(ngModel)]="model.age">
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+        </div>
+
+    </form>
+</div>

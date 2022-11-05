@@ -9,12 +9,18 @@ import { FormsModule } from '@angular/forms';
 import { ImagineCommentComponent } from './imagine-comment/imagine-comment.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { CookieService } from 'ngx-cookie-service';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginEntryComponent } from './login-entry/login-entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GenericInputsComponent,
-    ImagineCommentComponent
+    ImagineCommentComponent,
+    LoginComponent,
+    DashboardComponent,
+    LoginEntryComponent
   ],
   imports: [
     BrowserModule,

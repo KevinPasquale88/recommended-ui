@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +11,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginEntryComponent } from './login-entry/login-entry.component';
+import { ApiModule } from './api/api.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { LoginEntryComponent } from './login-entry/login-entry.component';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    JwtModule
+    JwtModule,
+    ApiModule.forRoot({ rootUrl: 'http://localhost:8080/' }),
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
